@@ -12,6 +12,18 @@ use think\Model;
 class Member extends Model {
 
     public function getMemberInfo($username,$pwd){
-        return $this->where(array('username' => $username,'password' => $pwd))->find();
+        return $this->where(array('username' => $username,'pwd' => $pwd))->find();
+    }
+
+    public function getMember($id){
+        return $this->where(array('id' => $id))->find();
+    }
+
+    public function checkUserName($username){
+        return $this->where(array('username' => $username))->find();
+    }
+
+    public function checkEmail($email){
+        return $this->where(array('email' => $email))->find();
     }
 }

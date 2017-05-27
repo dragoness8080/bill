@@ -6,24 +6,14 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
 table{border-collapse:collapse;border-spacing:0;}
 a{text-decoration:none;}
 
-body{
-    background: url("images/bg1.jpg") no-repeat 0px 0px;
-    font-family: "Open Sans", sans-serif;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    min-width: 1050px;
-}
 
+.login-body {  }
 .login-form {
-    background-color: #2b2636;
-    position: relative;
-    width: 30%;
-    margin: 3% auto 0 auto;
-    text-align: center;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -o-border-radius: 15px;
+    width: 403px;
+    height: 302px;
+    background: url('../images/login_m_bg.png') no-repeat 0px 0px;
+    margin: auto 0px;
+}
+.login-table {
+
 }

@@ -3,13 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>消费记录-登录</title>
-    <link rel="stylesheet" type="text/css" href="index.css"/>
-    <script type="text/javascript" src="PUBLIC_JS/jquery-3.2.1.min.js" />
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript" src="__JS__/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-    <div class="login-form">
-        <div>
-
+    <div class="login-body">
+        <div class="login-form">
+            <form action="__URL__/doLogin" method="post">
+                <div class="login-table">
+                    <div class="login-td">
+                        <label for="username">用户名</label>
+                        <input type="text" name="username" placeholder="请输入用户名/手机号/邮箱" autofocus />
+                        <label class="hit"></label>
+                    <div>
+                    <div class="login-td">
+                        <label for="pwd">密码</label>
+                        <input type="password" name="pwd" placeholder="请输入密码" />
+                        <label class="hit"></label>
+                    </div>
+                    <div class="login-td">
+                        <label for="code">验证码</label>
+                        <input type="text" name="code" />{:captcha_img()}
+                        <label class="hit"></label>
+                    </div>
+                    <div class="login-td">
+                        <a href="__URL__/register">用户注册</a><a href="#">忘记密码</a>
+                    </div>
+                    <div class="login-td">
+                        <input type="submit" value="登录" />
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </body>

@@ -15,14 +15,10 @@ class Bill extends BaseController {
 
     public function __construct(Request $request = null){
         parent::__construct($request);
-        if(isset(session('login.haslogin')) && session('login.haslogin')){
-
-        }else{
-            $this->error(lang('member_are_not_login_in'));
-        }
     }
 
     public function index(){
-
+        $this->view->engine->layout('layout/main_layout','__RIGHT__');
+        $this->fetch();
     }
 }
