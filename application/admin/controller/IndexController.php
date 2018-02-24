@@ -17,6 +17,9 @@
         public function index(){
 
             if(!Session::has('admin')){
+
+                var_dump('1111');die();
+
                 $this->error('请先登录', '/login',3);
             }
 
