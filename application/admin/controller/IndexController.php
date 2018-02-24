@@ -10,10 +10,17 @@
 
 
     use app\admin\controller\base\BaseController;
+    use think\Session;
 
     class IndexController extends BaseController {
 
         public function index(){
+
+            if(!Session::has('admin')){
+                $this->error('请先登录', '/login',3);
+            }
+
+            return $this->fetch();
 
         }
     }
