@@ -8,5 +8,4 @@
 
     define('APP_PATH', __DIR__ . '/../application/');
     define('BIND_MODULE', 'admin');
-    var_dump('1111');die();
-    require __DIR__ . '/../thinkphp/start.php';
+    require '../thinkphp/start.php';
