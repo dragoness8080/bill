@@ -8,4 +8,4 @@
 
     define('APP_PATH', __DIR__ . '/../application/');
     define('BIND_MODULE', 'admin');
-    require '../thinkphp/start.php';
+    require __DIR__ . '/../thinkphp/start.php';
