@@ -29,7 +29,7 @@
 
             $password = md5($password);
             $result = $this->where(['username' => $username, 'password' => $password])->find();
-            $result = $result->toArray();
+            //$result = $result->toArray();
 
             if(empty($result)){
                 return false;
