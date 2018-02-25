@@ -18,5 +18,7 @@ class Index extends Base {
         if(!$this->checkLoginStatus()){
             $this->error('会有登录，请先登录', url('login/index'));
         }
+
+        return $this->fetch();
     }
 }
