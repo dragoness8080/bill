@@ -1,4 +1,4 @@
-CREATE TABLE `manager`(
+CREATE TABLE IF NOT EXISTS `manager`(
   `id` INT(10) NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(100) NOT NULL COMMENT '用户名',
   `password` VARCHAR(40) NOT NULL COMMENT '密码',

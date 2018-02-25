@@ -25,8 +25,7 @@
         public function doLogin($username, $password){
 
             $password = md5($password);
-            $result = $this->fetchSql(true)->where(['username' => $username, 'password' => $password])->find();
-            var_dump($result);die();
+            $result = $this->db()->where(['username' => $username, 'password' => $password])->find();
             $result = $result->toArray();
 
             if(empty($result)){
