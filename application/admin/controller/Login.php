@@ -34,7 +34,7 @@ class Login extends Base {
         $password = Request::instance()->port('password');
 
         if(empty($username) || empty($password)){
-            $this->error('用户名或密码不正确', url('admin/login'));
+            $this->error('用户名或密码不正确', url('login'));
         }
 
         $managerModel = new Manager();
@@ -43,7 +43,7 @@ class Login extends Base {
             $this->success('登录成功', $this->ret);
         }
 
-        $this->error('登录失败，请重新登录', url('admin/login'));
+        $this->error('登录失败，请重新登录', url('login'));
     }
 
     public function register(){
