@@ -45,4 +45,8 @@ class Login extends Base {
 
         $this->error('登录失败，请重新登录', url('admin/login'));
     }
+
+    public function register(){
+
+    }
 }
