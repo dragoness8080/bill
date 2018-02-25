@@ -38,17 +38,8 @@ class Login extends Base {
         }
 
         $managerModel = new Manager;
-
-        /*
         if($managerModel->doLogin($username, $password)){
             $this->success('登录成功', $this->ret);
-        }
-        */
-        $result = $managerModel->find();
-        var_dump($result);die();
-        $result = $result->toArray();
-        if(empty($result)){
-            $this->error('登录失败', url('login/index'));
         }
 
         $this->error('登录失败，请重新登录', url('login/index'));

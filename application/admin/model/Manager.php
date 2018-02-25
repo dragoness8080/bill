@@ -15,6 +15,9 @@
 
         protected $table = 'manager';
         protected $pk = 'id';
+        protected $createTime = 'createtime';
+        protected $updateTime = false;  //关闭自动写入更新时间
+        protected $autoWriteTimestamp = true;   //开启自动写入时间戳
 
         /**
          * 登录验证
