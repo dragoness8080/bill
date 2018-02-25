@@ -242,8 +242,8 @@ return [
     // +-------------------------------------------------------------------------
     'tpl_replace_string'       => [
         //'__PUBLIC__'        => __ROOT__ . '/public',
-        '__ASSETS_CSS__'    => '/public/assets/css',
-        '__ASSETS_IMAGE__'  => '/public/assets/images',
-        '__ASSETS_JS__'     => '/public/assets/js'
+        '__ASSETS_CSS__'    => '/public/static/assets/css',
+        '__ASSETS_IMAGE__'  => '/public/static/assets/images',
+        '__ASSETS_JS__'     => '/public/static/assets/js'
     ],
 ];
