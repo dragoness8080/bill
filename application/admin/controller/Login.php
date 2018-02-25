@@ -30,10 +30,10 @@ class Login extends Base {
 
     public function doLogin(){
 
-        var_dump('11111');die();
-
         $username = Request::instance()->port('username');
         $password = Request::instance()->port('password');
+
+        var_dump('11111');die();
 
         if(empty($username) || empty($password)){
             $this->error('用户名或密码不正确', url('login/index'));
