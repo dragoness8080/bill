@@ -6,7 +6,7 @@
      * Time: 12:49
      */
 
-    namespace all\admin\model;
+    namespace app\admin\model;
 
     use think\Model;
     use think\Session;
