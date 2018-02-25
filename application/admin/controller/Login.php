@@ -33,6 +33,8 @@ class Login extends Base {
         $username = Request::instance()->port('username');
         $password = Request::instance()->port('password');
 
+        var_dump($username);die();
+
         if(empty($username) || empty($password)){
             $this->error('用户名或密码不正确', url('login/index'));
         }
