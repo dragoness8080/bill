@@ -8,7 +8,6 @@
 
     namespace app\admin\model;
 
-    use think\Db;
     use think\Model;
     use think\Session;
 
@@ -26,7 +25,7 @@
         public function doLogin($username, $password){
 
             $password = md5($password);
-            $result = Db::table('manager')->where(['username' => $username, 'password' => $password])->find();
+            $result = $this->where(['username' => $username, 'password' => $password])->find();
             $result = $result->toArray();
 
             if(empty($result)){
