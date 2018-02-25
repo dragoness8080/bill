@@ -44,7 +44,7 @@ class Login extends Base {
             $this->success('登录成功', $this->ret);
         }
         */
-        $result = $managerModel->where(array('username' => $username, 'password' => $password))->find();
+        $result = $managerModel->find();
         var_dump($result);die();
         $result = $result->toArray();
         if(empty($result)){
