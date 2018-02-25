@@ -30,6 +30,8 @@ class Login extends Base {
 
     public function doLogin(){
 
+        var_dump('11111');die();
+
         $username = Request::instance()->port('username');
         $password = Request::instance()->port('password');
 
