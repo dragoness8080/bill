@@ -47,5 +47,6 @@ class Login extends Base {
 
     public function register(){
 
+        return $this->fetch();
     }
 }
