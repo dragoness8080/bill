@@ -37,7 +37,7 @@ class Login extends Base {
             $this->error('用户名或密码不正确', url('login/index'));
         }
 
-        $managerModel = new Manager();
+        $managerModel = new Manager;
 
         if($managerModel->doLogin($username, $password)){
             $this->success('登录成功', $this->ret);
