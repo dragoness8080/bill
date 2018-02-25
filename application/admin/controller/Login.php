@@ -30,10 +30,8 @@ class Login extends Base {
 
     public function doLogin(){
 
-        $username = Request::instance()->port('username');
-        $password = Request::instance()->port('password');
-
-        var_dump($username);die();
+        $username = Request::instance()->post('username');
+        $password = Request::instance()->post('password');
 
         if(empty($username) || empty($password)){
             $this->error('用户名或密码不正确', url('login/index'));
@@ -54,9 +52,9 @@ class Login extends Base {
 
     public function doRegister(){
 
-        $userName = Request::instance()->port('username');
-        $passWord = Request::instance()->port('password');
-        $confirm_password = Request::instance()->port('confirm_password');
+        $userName = Request::instance()->post('username');
+        $passWord = Request::instance()->post('password');
+        $confirm_password = Request::instance()->post('confirm_password');
 
         if(empty($userName) || empty($passWord)){
             $this->error('用户名或密码不能为空', url('register'));
