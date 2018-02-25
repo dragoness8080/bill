@@ -25,6 +25,7 @@
         public function doLogin($username, $password){
 
             $password = md5($password);
+            /*
             $result = $this->db()->where(['username' => $username, 'password' => $password])->find();
             $result = $result->toArray();
 
@@ -36,5 +37,7 @@
             Session::set('admin.has_login', true);
 
             return true;
+            */
+            return false;
         }
     }
