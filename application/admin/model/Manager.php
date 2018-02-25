@@ -40,4 +40,8 @@
 
             return true;
         }
+
+        protected function scopeUserName($query,$val){
+            $query->where('username','like',$val);
+        }
     }

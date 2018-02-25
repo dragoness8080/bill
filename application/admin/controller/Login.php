@@ -49,4 +49,27 @@ class Login extends Base {
 
         return $this->fetch();
     }
+
+    public function doRegister(){
+
+        $userName = Request::instance()->port('username');
+        $passWord = Request::instance()->port('password');
+        $confirm_password = Request::instance()->port('confirm_password');
+
+        if(empty($userName) || empty($passWord)){
+            $this->error('用户名或密码不能为空', url('register'));
+        }
+
+        if($passWord != $confirm_password){
+            $this->error('两次密码输入不相同', url('register'));
+        }
+
+        $info = Manager::scope('userName',$userName)->select();
+        if(!empty($info)){
+            $this->error('用户名已存在，请重新输入', url('register'));
+        }
+
+        Manager::create(['username' => $userName, 'password' => md5($passWord)]);
+        $this->success('注册会员成功', url('index/index'));
+    }
 }
