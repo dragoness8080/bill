@@ -33,13 +33,13 @@ class Login extends Base {
         $username = Request::instance()->port('username');
         $password = Request::instance()->port('password');
 
-        var_dump('11111');die();
-
         if(empty($username) || empty($password)){
             $this->error('用户名或密码不正确', url('login/index'));
         }
 
         $managerModel = new Manager();
+
+        var_dump('111');die();
 
         if($managerModel->doLogin($username, $password)){
             $this->success('登录成功', $this->ret);
