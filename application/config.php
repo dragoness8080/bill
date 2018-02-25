@@ -241,7 +241,6 @@ return [
     // | 模版常量定义
     // +-------------------------------------------------------------------------
     'tpl_replace_string'       => [
-        //'__PUBLIC__'        => __ROOT__ . '/public',
         '__ASSETS_CSS__'    => '/public/static/assets/css',
         '__ASSETS_IMAGE__'  => '/public/static/assets/images',
         '__ASSETS_JS__'     => '/public/static/assets/js'
