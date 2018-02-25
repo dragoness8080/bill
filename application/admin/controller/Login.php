@@ -9,7 +9,7 @@
 namespace app\admin\controller;
 
 
-use all\admin\model\Manager;
+use app\admin\model\Manager;
 use app\admin\base\Base;
 use think\Request;
 
