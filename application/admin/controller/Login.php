@@ -39,6 +39,8 @@ class Login extends Base {
 
         $managerModel = new Manager;
 
+        var_dump('1111');die();
+
         if($managerModel->doLogin($username, $password)){
             $this->success('登录成功', $this->ret);
         }
