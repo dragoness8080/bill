@@ -240,7 +240,7 @@ return [
     // +-------------------------------------------------------------------------
     // | 模版常量定义
     // +-------------------------------------------------------------------------
-    'tpl_replace_string'       => [
+    'view_replace_str'       => [
         '__ASSETS_CSS__'    => '/public/static/assets/css',
         '__ASSETS_IMAGE__'  => '/public/static/assets/images',
         '__ASSETS_JS__'     => '/public/static/assets/js'
