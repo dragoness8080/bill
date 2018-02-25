@@ -25,7 +25,7 @@ class Login extends Base {
             $this->success('已登录，直接跳转', $this->ret);
         }
 
-        return $this->fetch();
+        return $this->fetch('login/index');
     }
 
     public function doLogin(){
