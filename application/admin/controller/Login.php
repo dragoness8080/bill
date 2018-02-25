@@ -45,6 +45,7 @@ class Login extends Base {
         }
         */
         $result = $managerModel->where(array('username' => $username, 'password' => $password))->find();
+        var_dump($result);die();
         $result = $result->toArray();
         if(empty($result)){
             $this->error('登录失败', url('login/index'));
