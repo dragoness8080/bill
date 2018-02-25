@@ -25,7 +25,7 @@
         public function doLogin($username, $password){
 
             $password = md5($password);
-
+            var_dump('111111');
             $result = $this->where(['username' => $username, 'password' => $password])->find();
             var_dump($result);die();
             $result = $result->toArray();
