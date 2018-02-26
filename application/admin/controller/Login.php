@@ -12,6 +12,7 @@ namespace app\admin\controller;
 use app\admin\model\Manager;
 use app\admin\base\Base;
 use think\Request;
+use think\Session;
 
 class Login extends Base {
 
@@ -71,5 +72,13 @@ class Login extends Base {
 
         Manager::create(['username' => $userName, 'password' => md5($passWord)]);
         $this->success('注册会员成功', url('index/index'));
+    }
+
+    public function loginOut(){
+
+        Session::set('admin','');
+
+        $this->redirect(url('login/login'));
+
     }
 }

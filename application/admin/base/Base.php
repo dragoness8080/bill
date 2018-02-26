@@ -24,7 +24,7 @@ class Base extends Controller {
     }
 
     protected $beforeActionList = [
-        'checkLoginStatus'  => ['except' => 'login,doLogin,register,doRegister']
+        'checkToLogin'  => ['except' => 'login,doLogin,register,doRegister']
     ];
 
     /**
@@ -33,5 +33,11 @@ class Base extends Controller {
      */
     public function checkLoginStatus(){
         return Session::has('admin') && Session::get('admin.has_login') ? true : false;
+    }
+
+    public function checkToLogin(){
+        if(!$this->checkLoginStatus()){
+            $this->error('请登录后再操作', url('login/login'));
+        }
     }
 }
