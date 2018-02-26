@@ -24,7 +24,7 @@ class Base extends Controller {
     }
 
     protected $beforeActionList = [
-        'checkToLogin'  => ['except' => 'login,doLogin,register,doRegister']
+        //'checkToLogin'  => ['except' => 'login,doLogin,register,doRegister']
     ];
 
     /**
