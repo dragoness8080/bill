@@ -74,4 +74,11 @@
 
             return $this->fetch('post');
         }
+
+        public function delete(){
+            $id = Request::instance()->get('id');
+            $memberModel = model('Member');
+            $memberModel->where('id',$id)->delete();
+            $this->success('删除成功', url('member/index'));
+        }
     }
