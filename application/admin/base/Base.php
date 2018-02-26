@@ -23,6 +23,10 @@ class Base extends Controller {
         $this->ret = empty($ret) ? url('index/index') : $ret;   //获取跳转路径
     }
 
+    protected $beforeActionList = [
+        'checkLoginStatus'  => ['except' => 'login,doLogin,register,doRegister']
+    ];
+
     /**
      * 检测是否登录
      * @return bool
