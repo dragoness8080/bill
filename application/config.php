@@ -241,10 +241,10 @@ return [
     // | 模版常量定义
     // +-------------------------------------------------------------------------
     'view_replace_str'       => [
-        '__ASSETS_CSS__'    => '/public/static/assets/css',
-        '__ASSETS_IMAGE__'  => '/public/static/assets/images',
-        '__ASSETS_JS__'     => '/public/static/assets/js',
-        '__ASSETS_PLUGINS__'    => '/public/static/assets/plugins',
-        '__ASSETS_PAGES__'  => '/public/static/assets/pages'
+        '__ASSETS_CSS__'    => '/static/assets/css',
+        '__ASSETS_IMAGE__'  => '/static/assets/images',
+        '__ASSETS_JS__'     => '/static/assets/js',
+        '__ASSETS_PLUGINS__'    => '/static/assets/plugins',
+        '__ASSETS_PAGES__'  => '/static/assets/pages'
     ],
 ];
