@@ -19,6 +19,8 @@ class Index extends Base {
             $this->error('会有登录，请先登录', url('login/login'));
         }
 
+        //获取本月当前总消费金额
+
         return $this->fetch();
     }
 }

@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS `consumption`(
   `id` INT(10) NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(200) NOT NULL COMMENT '消费类型',
   `order_by` INT(10) NULL DEFAULT 0 COMMENT '排行ID',
+  `status` TINYINT NULL DEFAULT 0 COMMENT '状态，默认0收入，1支出',
   PRIMARY KEY (`id`)
 );
 
@@ -58,5 +59,6 @@ CREATE TABLE IF NOT EXISTS `consumption_log`(
   `pay_time` INT(6) NOT NULL COMMENT '消费时间',
   `create_tiem` INT(6) NULL DEFAULT 0 COMMENT '记录时间',
   `money` DECIMAL(10,2) NOT NULL COMMENT '消费金额',
+  `cid` INT(10) NOT NULL COMMENT '支付类型ID',
   PRIMARY KEY (`id`)
 );

@@ -11,6 +11,7 @@ namespace app\admin\controller;
 
 
 use app\admin\base\Base;
+use think\Request;
 
 class Consumption extends Base {
 
@@ -20,6 +21,32 @@ class Consumption extends Base {
 
     public function index(){
 
+        $consumptionModel = model('Consumption');
+        $list = $consumptionModel->paginate();
+        $page = $list->render();
+
+        $this->assign('list', $list);
+        $this->assign('page', $page);
+        return $this->fetch();
+    }
+
+    public function add(){
+        $this->post('add');
+    }
+
+    public function edit(){
+        $this->post('edit');
+    }
+
+    public function post($type){
+
+        $id = Request::instance()->get('id');
+        $consumptionModel = model('Consumption');
+        $info = $consumptionModel->where('id', $id)->find();
+
+        if(Request::instance()->isPost()){
+
+        }
     }
 
 }
