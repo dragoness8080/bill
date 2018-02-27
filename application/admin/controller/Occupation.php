@@ -37,7 +37,7 @@ class Occupation extends Base {
         $this->post('edit');
     }
 
-    private function post($type){
+    public function post($type){
 
         $id = Request::instance()->get('id');
         $occupationModel = model('Occupation');
