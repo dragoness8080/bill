@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `occupation`(
   `parent_id` INT(10) NULL DEFAULT 0 COMMENT '上级ID',
   `title` VARCHAR(255) NOT NULL COMMENT '职业名称',
   `order_by` INT(10) NULL DEFAULT 0 COMMENT '排序ID',
+  `is_parent` TINYINT NULL DEFAULT 0 COMMENT '允许下级，默认0不允许',
   PRIMARY KEY (`id`)
 );
 

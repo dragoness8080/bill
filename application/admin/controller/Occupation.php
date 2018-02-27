@@ -43,6 +43,8 @@ class Occupation extends Base {
         $occupationModel = model('Occupation');
         $occ = $occupationModel->where('id', $id)->find();
 
+        //获取职业树
+
         if(Request::instance()->isPost()){
 
             $data = [
