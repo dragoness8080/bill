@@ -62,7 +62,7 @@ class Occupation extends Base {
             $this->success('职业操作成功', url('occupation/index'));
         }
 
-        return $this->fetch();
+        return $this->fetch('occupation/post');
     }
 
     public function delete(){
