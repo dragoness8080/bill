@@ -37,7 +37,7 @@ class Occupation extends Base {
         $this->post('edit');
     }
 
-    public function post($type){
+    private function post($type){
 
         $id = Request::instance()->get('id');
         $occupationModel = model('Occupation');
@@ -62,7 +62,7 @@ class Occupation extends Base {
             $this->success('职业操作成功', url('occupation/index'));
         }
 
-        return $this->fetch('post');
+        return $this->fetch();
     }
 
     public function delete(){
