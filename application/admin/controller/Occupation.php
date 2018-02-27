@@ -62,8 +62,6 @@ class Occupation extends Base {
             $this->success('职业操作成功', url('occupation/index'));
         }
 
-        var_dump('111111');die();
-
         return $this->fetch('post');
     }
 
